@@ -1,12 +1,30 @@
 {
   "expo": {
+    "name": "ContactGuard",
+    "slug": "contactguard",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.jpg",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/icon.jpg",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.jpg",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.aplannst.contactguard"
+    },
     "extra": {
       "eas": {
         "projectId": "945ea170-f0fd-40e3-a1e8-4c4fd752056e"
       }
-    },
-    "android": {
-      "package": "com.aplannst.getcontactrnprototype"
     }
   }
 }
