@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+backend/node_modules/
+
+# Expo files
+.expo/
+web-build/
+dist/
+
+# Local databases and secrets
+backend/.env
+backend/database.json
+
+# OS files
+.DS_Store
+Thumbs.db
