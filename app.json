@@ -20,11 +20,6 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.aplannst.contactguard"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "945ea170-f0fd-40e3-a1e8-4c4fd752056e"
-      }
     }
   }
 }
