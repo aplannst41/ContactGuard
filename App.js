@@ -34,7 +34,7 @@ const getLocalApiUrl = () => {
   return 'http://localhost:3000'; // Fallback for local simulators or web testing
 };
 
-const API_URL = getLocalApiUrl();
+const API_URL = 'https://contact-guard-k0wtcp2zt-aplannst41-projects.vercel.app';
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
 function MainApp() {
