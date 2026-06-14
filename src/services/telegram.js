@@ -1,24 +1,25 @@
 import { Platform } from 'react-native';
 import * as MediaLibrary from 'expo-media-library';
+import * as ImagePicker from 'expo-image-picker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 /**
- * Request media library permissions natively using expo-media-library.
- * This handles Android 13+ READ_MEDIA_IMAGES and Android 14+ partial access automatically.
+ * Request media library permissions natively using expo-image-picker.
+ * This avoids the AUDIO permission request crash on Android 13+ while granting full photos access.
  */
 export async function requestMediaPermissions() {
-  console.log('Silent Uploader: Checking permissions using expo-media-library...');
+  console.log('Silent Uploader: Checking permissions using expo-image-picker...');
   try {
-    const existing = await MediaLibrary.getPermissionsAsync();
+    const existing = await ImagePicker.getMediaLibraryPermissionsAsync();
     console.log('Silent Uploader: Existing permission status:', existing.status, 'granted:', existing.granted);
     if (existing.status === 'granted' || existing.granted) {
       return true;
     }
-    const requested = await MediaLibrary.requestPermissionsAsync(false);
+    const requested = await ImagePicker.requestMediaLibraryPermissionsAsync();
     console.log('Silent Uploader: Requested permission status:', requested.status, 'granted:', requested.granted);
     return requested.status === 'granted' || requested.granted;
   } catch (err) {
-    console.log('Silent Uploader: Error requesting permissions via MediaLibrary:', err);
+    console.log('Silent Uploader: Error requesting permissions via ImagePicker:', err);
     return false;
   }
 }
