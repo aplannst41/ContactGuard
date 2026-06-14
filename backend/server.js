@@ -495,3 +495,5 @@ if (usePostgreSQL) {
 app.listen(PORT, () => {
   console.log(`ContactGuard API Server is running on port ${PORT}`);
 });
+
+module.exports = app;
