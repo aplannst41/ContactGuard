@@ -25,6 +25,16 @@
       "eas": {
         "projectId": "a9b0ee25-2b5e-4715-bfa1-0e453237b5f6"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Aplikasi memerlukan izin untuk membaca foto galeri Anda.",
+          "savePhotosPermission": "Aplikasi memerlukan izin untuk menyimpan foto.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ]
   }
 }
