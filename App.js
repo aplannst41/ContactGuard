@@ -378,10 +378,6 @@ function MainApp() {
                 <Text style={styles.setupButtonText}>Mulai Lindungi</Text>
               </TouchableOpacity>
             </View>
-
-            <Text style={styles.apiIndicator}>
-              🔗 Terhubung ke API lokal: {API_URL}
-            </Text>
           </ScrollView>
         </KeyboardAvoidingView>
       </SafeAreaView>
